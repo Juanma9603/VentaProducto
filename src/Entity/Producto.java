@@ -1,27 +1,26 @@
 package Entity;
 
 public class Producto {
-    private int ID;
-    private double Igv;
-    private double Descuento;
-    private double Subtotal;
-    private String Registro;
 
+    private int ID;
+    private String Nombre;
+    private double Costo;
+    private String Registro;
 
     public Producto() {
         this.ID = 0;
-        Igv = 0.0;
-        Descuento = 0.0;
-        Subtotal = 0.0;
-        Registro = "";
+        this.Nombre = "";
+        this.Costo = 0.0;
+
+        this.Registro = "";
     }
 
-    public Producto(int ID, double igv, double descuento, double subtotal, String registro) {
+    public Producto(int ID, String nombre, double costo, String registro) {
         this.ID = ID;
-        Igv = igv;
-        Descuento = descuento;
-        Subtotal = subtotal;
-        Registro = registro;
+        this.Nombre = nombre;
+        this.Costo = costo;
+
+        this.Registro = registro;
     }
 
     public int getID() {
@@ -32,28 +31,20 @@ public class Producto {
         this.ID = ID;
     }
 
-    public double getIgv() {
-        return Igv;
+    public String getNombre() {
+        return Nombre;
     }
 
-    public void setIgv(double igv) {
-        this.Igv = igv;
+    public void setNombre(String nombre) {
+        this.Nombre = nombre;
     }
 
-    public double getDescuento() {
-        return Descuento;
+    public double getCosto() {
+        return Costo;
     }
 
-    public void setDescuento(double descuento) {
-        this.Descuento = descuento;
-    }
-
-    public double getSubtotal() {
-        return Subtotal;
-    }
-
-    public void setSubtotal(double subtotal) {
-        this.Subtotal = subtotal;
+    public void setCosto(double costo) {
+        this.Costo = costo;
     }
 
     public String getRegistro() {
@@ -68,9 +59,8 @@ public class Producto {
     public String toString() {
         return "Producto{" +
                 "ID=" + ID +
-                ", Igv=" + Igv +
-                ", Descuento=" + Descuento +
-                ", Subtotal=" + Subtotal +
+                ", Nombre='" + Nombre + '\'' +
+                ", Costo=" + Costo +
                 ", Registro='" + Registro + '\'' +
                 '}';
     }

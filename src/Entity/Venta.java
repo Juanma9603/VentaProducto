@@ -2,25 +2,29 @@ package Entity;
 
 public class Venta {
     private int ID;
-    private String Nombre;
-    private double Costo;
+    private double Igv;
+    private double Descuento;
+    private double Subtotal;
     private int Cantidad;
     private String Registro;
 
+
     public Venta() {
         this.ID = 0;
-        this.Nombre = "";
-        this.Costo = 0.0;
+        Igv = 0.0;
+        Descuento = 0.0;
+        Subtotal = 0.0;
         this.Cantidad = 0;
-        this.Registro = "";
+        Registro = "";
     }
 
-    public Venta(int ID, String nombre, double costo, int cantidad, String registro) {
+    public Venta(int ID, double igv, double descuento, double subtotal, int cantidad, String registro) {
         this.ID = ID;
-        this.Nombre = nombre;
-        this.Costo = costo;
+        Igv = igv;
+        Descuento = descuento;
+        Subtotal = subtotal;
         this.Cantidad = cantidad;
-        this.Registro = registro;
+        Registro = registro;
     }
 
     public int getID() {
@@ -31,20 +35,28 @@ public class Venta {
         this.ID = ID;
     }
 
-    public String getNombre() {
-        return Nombre;
+    public double getIgv() {
+        return Igv;
     }
 
-    public void setNombre(String nombre) {
-        this.Nombre = nombre;
+    public void setIgv(double igv) {
+        this.Igv = igv;
     }
 
-    public double getCosto() {
-        return Costo;
+    public double getDescuento() {
+        return Descuento;
     }
 
-    public void setCosto(double costo) {
-        this.Costo = costo;
+    public void setDescuento(double descuento) {
+        this.Descuento = descuento;
+    }
+
+    public double getSubtotal() {
+        return Subtotal;
+    }
+
+    public void setSubtotal(double subtotal) {
+        this.Subtotal = subtotal;
     }
 
     public int getCantidad() {
@@ -67,10 +79,11 @@ public class Venta {
     public String toString() {
         return "Venta{" +
                 "ID=" + ID +
-                ", Nombre='" + Nombre + '\'' +
-                ", Costo=" + Costo +
-                ", Cantidad=" + Cantidad +
-                ", Registro='" + Registro + '\'' +
+                ", Igv=" + Igv +
+                ", Descuento=" + Descuento +
+                ", Subtotal=" + Subtotal +
+                        ", Cantidad=" + Cantidad +
+        ", Registro='" + Registro + '\'' +
                 '}';
     }
 }
