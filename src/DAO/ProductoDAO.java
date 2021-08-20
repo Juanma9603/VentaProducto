@@ -79,19 +79,19 @@ public class ProductoDAO {
 
         try {
             Statement stm=con.getCon().createStatement();
-            ResultSet rs=stm.executeQuery("CALL listarProductos();");
+            ResultSet rs=stm.executeQuery("CALL sp_listarProductos();");
             while (rs.next()){
-                rs.getInt(1),
-                rs.getString(2),
-                rs.getDouble(2),
-                rs.getString("")
+                Producto objtmpproducto=new Producto(
+                        rs.getInt(1),
+                        rs.getString(2),
+                        rs.getDouble(3),
+                        rs.getString(4)
+                );
+                listproductos.add(objtmpproducto);
             }
         }catch (SQLException er){
             System.out.println("SQL Error: "+er);
         }
-
-
-
         return listproductos;
     }
 }

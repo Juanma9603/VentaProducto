@@ -1,7 +1,10 @@
 import DAO.Conexion;
 import DAO.ProductoDAO;
+import DAO.VentaDAO;
 import Entity.Producto;
+import Entity.Venta;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +14,13 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Producto objproducto =new Producto();
         ProductoDAO ProductoDAO;
+        Venta objventa=new Venta();
+        VentaDAO VentaDAO;
+        double Subtotal = 0;
+        double Igv=0;
+        double Descuento=0;
+        int cantidad=0;
+        double SumaSubt=0;
         boolean iniciar = true;
 
 
@@ -98,8 +108,16 @@ public class Main {
 
                                     break;
                                 case 4:
+                                    ArrayList<Producto> list=new ArrayList<>();
+                                    try {
                                     System.out.println("Listar Productos");
-
+                                        ArrayList<Producto> listproductos= ProductoDAO.list();
+                                        for (int i=0;i< listproductos.size();i++){
+                                            System.out.println(listproductos.get(i).toString());
+                                        }
+                                    }catch (Exception e){
+                                        System.out.println("ERROR: "+e);
+                                    }
 
                                     System.out.println("1.Volver al menu");
 
@@ -109,17 +127,68 @@ public class Main {
                             }
                             break;
                         case 3:
+
+                            ProductoDAO=new ProductoDAO();
                             System.out.println("Venta");
-                            System.out.println("Lista de Prodcutos");
+                            boolean volver=true;
+                            while (volver) {
+                            System.out.println("Lista de Productos");
+                            ArrayList<Producto> list=new ArrayList<>();
 
+                            try {
 
-                            System.out.println("Registrar Productos");
-                            System.out.println("Indica el Item");
+                                ArrayList<Producto> listproductos= ProductoDAO.list();
+                                for (int i=0;i<listproductos.size();i++){
+                                    System.out.println(listproductos.get(i).toString());
+                                }
+                            }catch (Exception e){
+                                System.out.println("ERROR: "+e);
+                            }
 
-                            System.out.println("Indica la Cantidad");
+                                System.out.println("Registrar Productos");
+                                System.out.println("Indica el Item");
+                                Producto objtmpproducto = ProductoDAO.Consultar(scanner.nextInt());
+                                System.out.println("Indica la Cantidad");
+                                cantidad = scanner.nextInt();
+                                Subtotal = objtmpproducto.getCosto() * cantidad;
+                                Igv = (18 * Subtotal) / 100;
+                                objventa.setSubtotal(objtmpproducto.getCosto() * cantidad);
+                                objventa.setIgv(18 * Subtotal / 100);
+                                objventa.setDescuento(0);
+                                ArrayList<Venta> list1 = new ArrayList<>();
+                                list1.add(objventa);
 
+                                System.out.println("1.Seguir registrando");
+                                System.out.println("2.Terminar de registrar");
+                                int escoger=scanner.nextInt();
+                                switch (escoger){
+                                    case 1:
+                                        volver=true;
+                                        break;
+                                    case 2:
+                                        volver=false;
+                                        break;
+                                }
 
-                            System.out.println("1.Seguir registrando");
+                                for (int i=0;i<list1.size();i++){
+                                    SumaSubt=SumaSubt+list1.get(i).getSubtotal();
+                                    System.out.println(SumaSubt);
+                                    if (SumaSubt<50){
+                                        System.out.println("No  hay descuento");
+                                    }else if (SumaSubt>51 && SumaSubt<100){
+                                        System.out.println("Descuento de 5%");
+                                        Descuento=5*SumaSubt/100;
+                                        SumaSubt=SumaSubt-Descuento;
+                                        System.out.println(SumaSubt);
+                                    }else {
+                                        System.out.println("Descuento de 10%");
+                                        Descuento=10*SumaSubt/100;
+                                        SumaSubt=SumaSubt-Descuento;
+                                        System.out.println(SumaSubt);
+                                    }
+                                }
+                            }
+
                             System.out.println("2.Confirmar venta");
                             System.out.println("3.Volver al menu");
 

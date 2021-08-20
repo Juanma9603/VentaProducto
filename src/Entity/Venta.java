@@ -5,7 +5,6 @@ public class Venta {
     private double Igv;
     private double Descuento;
     private double Subtotal;
-    private int Cantidad;
     private String Registro;
 
 
@@ -14,16 +13,15 @@ public class Venta {
         Igv = 0.0;
         Descuento = 0.0;
         Subtotal = 0.0;
-        this.Cantidad = 0;
         Registro = "";
     }
 
-    public Venta(int ID, double igv, double descuento, double subtotal, int cantidad, String registro) {
+    public Venta(int ID, double igv, double descuento, double subtotal, String registro) {
         this.ID = ID;
         Igv = igv;
         Descuento = descuento;
         Subtotal = subtotal;
-        this.Cantidad = cantidad;
+
         Registro = registro;
     }
 
@@ -59,14 +57,6 @@ public class Venta {
         this.Subtotal = subtotal;
     }
 
-    public int getCantidad() {
-        return Cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.Cantidad = cantidad;
-    }
-
     public String getRegistro() {
         return Registro;
     }
@@ -82,7 +72,6 @@ public class Venta {
                 ", Igv=" + Igv +
                 ", Descuento=" + Descuento +
                 ", Subtotal=" + Subtotal +
-                        ", Cantidad=" + Cantidad +
         ", Registro='" + Registro + '\'' +
                 '}';
     }

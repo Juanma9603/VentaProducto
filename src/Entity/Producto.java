@@ -11,7 +11,6 @@ public class Producto {
         this.ID = 0;
         this.Nombre = "";
         this.Costo = 0.0;
-
         this.Registro = "";
     }
 
@@ -19,7 +18,6 @@ public class Producto {
         this.ID = ID;
         this.Nombre = nombre;
         this.Costo = costo;
-
         this.Registro = registro;
     }
 

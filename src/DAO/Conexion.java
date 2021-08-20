@@ -21,7 +21,7 @@ public class Conexion implements Serializable {
         Connection c=null;
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            c=DriverManager.getConnection("jdbc:mysql://localhost:3306/ventadeproducto","root","pass");
+            c=DriverManager.getConnection("jdbc:mysql://localhost:3306/ventadeproducto","newuser","123456789");
             System.out.println("Conectado");
         }catch (Exception e){
             System.out.println("Error "+e);
