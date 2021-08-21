@@ -1,28 +1,33 @@
 package Entity;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Venta {
     private int ID;
     private double Igv;
     private double Descuento;
     private double Subtotal;
-    private String Registro;
+    private Date Registro;
+    private ArrayList<DetalleVenta> lstDetalleVenta;
 
 
     public Venta() {
         this.ID = 0;
-        Igv = 0.0;
-        Descuento = 0.0;
-        Subtotal = 0.0;
-        Registro = "";
+        this.Igv = 0.0;
+        this.Descuento = 0.0;
+        this.Subtotal = 0.0;
+        this.Registro = new Date();
+        this.lstDetalleVenta=new ArrayList<DetalleVenta>();
     }
 
-    public Venta(int ID, double igv, double descuento, double subtotal, String registro) {
+    public Venta(int ID, double igv, double descuento, double subtotal, Date registro, ArrayList<DetalleVenta> lstDetalleVenta) {
         this.ID = ID;
-        Igv = igv;
-        Descuento = descuento;
-        Subtotal = subtotal;
-
-        Registro = registro;
+        this.Igv = igv;
+        this.Descuento = descuento;
+        this.Subtotal = subtotal;
+        this.Registro = registro;
+        this.lstDetalleVenta= lstDetalleVenta;
     }
 
     public int getID() {
@@ -57,12 +62,20 @@ public class Venta {
         this.Subtotal = subtotal;
     }
 
-    public String getRegistro() {
+    public Date getRegistro() {
         return Registro;
     }
 
-    public void setRegistro(String registro) {
+    public void setRegistro(Date registro) {
         this.Registro = registro;
+    }
+
+    public ArrayList<DetalleVenta> getLstDetalleVenta() {
+        return lstDetalleVenta;
+    }
+
+    public void setLstDetalleVenta(ArrayList<DetalleVenta> lstDetalleVenta) {
+        this.lstDetalleVenta = lstDetalleVenta;
     }
 
     @Override
@@ -72,7 +85,8 @@ public class Venta {
                 ", Igv=" + Igv +
                 ", Descuento=" + Descuento +
                 ", Subtotal=" + Subtotal +
-        ", Registro='" + Registro + '\'' +
+                ", Registro=" + Registro +
+                ", lstDetalleVenta=" + lstDetalleVenta +
                 '}';
     }
 }

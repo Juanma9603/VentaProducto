@@ -1,20 +1,22 @@
 package Entity;
 
+import java.util.Date;
+
 public class Producto {
 
     private int ID;
     private String Nombre;
     private double Costo;
-    private String Registro;
+    private Date Registro;
 
     public Producto() {
         this.ID = 0;
         this.Nombre = "";
         this.Costo = 0.0;
-        this.Registro = "";
+        this.Registro = new Date();
     }
 
-    public Producto(int ID, String nombre, double costo, String registro) {
+    public Producto(int ID, String nombre, double costo, Date registro) {
         this.ID = ID;
         this.Nombre = nombre;
         this.Costo = costo;
@@ -45,11 +47,11 @@ public class Producto {
         this.Costo = costo;
     }
 
-    public String getRegistro() {
+    public Date getRegistro() {
         return Registro;
     }
 
-    public void setRegistro(String registro) {
+    public void setRegistro(Date registro) {
         this.Registro = registro;
     }
 

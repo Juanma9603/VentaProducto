@@ -52,7 +52,7 @@ public class ProductoDAO {
                         rs.getInt("Id_Producto"),
                         rs.getString("Nombre"),
                         rs.getDouble("Costo"),
-                        rs.getString("Registro")
+                        rs.getDate("Registro")
                 );
             }
         }catch (SQLException er){
@@ -85,7 +85,7 @@ public class ProductoDAO {
                         rs.getInt(1),
                         rs.getString(2),
                         rs.getDouble(3),
-                        rs.getString(4)
+                        rs.getDate(4)
                 );
                 listproductos.add(objtmpproducto);
             }
