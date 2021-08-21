@@ -131,6 +131,7 @@ public class Main {
                         case 3:
                             ArrayList<DetalleVenta> listDetalle = new ArrayList<>();
                             ProductoDAO=new ProductoDAO();
+                            VentaDAO=new VentaDAO();
                             System.out.println("Venta");
                             boolean volver=true;
                             while (volver) {
@@ -196,6 +197,7 @@ public class Main {
                                     case 2:
                                         System.out.println("Modificar");
                                         System.out.println("Indica el ID del Producto a Modificar");
+                                        Producto objtmpmod = ProductoDAO.Consultar(scanner.nextInt());
 
 
 
@@ -207,7 +209,7 @@ public class Main {
                                         break;
                                     case 3:
                                         volver=false;
-                                        new VentaDAO().Registrar(objVenta);
+                                        VentaDAO.Registrar(objVenta);
 
                                         int listo=scanner.nextInt();
                                         switch (listo){

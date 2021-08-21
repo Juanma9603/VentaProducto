@@ -22,10 +22,6 @@ public class VentaDAO {
             ResultSet rs= ps.executeQuery();
             if (rs.next()){
                 objVenta.setID(rs.getInt(1));
-
-
-                //System.out.println(objVenta.getID());
-
             }
             new DetalleVentaDAO().Registrar(objVenta);
 
@@ -33,5 +29,19 @@ public class VentaDAO {
             System.out.println("SQL Error: "+ er);
         }
 
+    }
+
+    public void Modificar(Venta objVenta){
+        try {
+            String sql="CALL sp_ventaUPDATE(?,?,?,?)";
+            PreparedStatement ps=con.getCon().prepareStatement(sql);
+            ps.setInt(1,objVenta.getID());
+            ps.setDouble(2,objVenta.getIgv());
+            ps.setDouble(3,objVenta.getDescuento());
+            ps.setDouble(4,objVenta.getSubtotal());
+
+        }catch (SQLException er){
+            System.out.println("SQL Errormod: "+er);
+        }
     }
 }
