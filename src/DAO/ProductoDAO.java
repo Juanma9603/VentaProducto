@@ -9,11 +9,18 @@ import java.sql.Statement;
 import java.util.ArrayList;
 
 public class ProductoDAO {
-    Conexion con=new Conexion();
+    private static ProductoDAO Instance=null;
+    static Conexion con=Conexion.getInstance();
+
+    public static ProductoDAO getInstance(){
+        if (Instance==null){
+            Instance=new ProductoDAO();
+        }
+        return Instance;
+    }
 
 
-
-    public void Añadir (Producto objproducto){
+    public static void Añadir(Producto objproducto){
         try {
             String sql= "CALL sp_productoINSERT(?,?)";
             PreparedStatement ps=con.getCon().prepareStatement(sql);
@@ -26,7 +33,7 @@ public class ProductoDAO {
         }
     }
 
-    public void Modificar (Producto objproducto){
+    public static void Modificar(Producto objproducto){
         try {
             String sql="CALL sp_productoUPDATE(?,?,?)";
             PreparedStatement ps=con.getCon().prepareStatement(sql);
@@ -39,7 +46,7 @@ public class ProductoDAO {
         }
     }
 
-    public Producto Consultar (int ID){
+    public static Producto Consultar(int ID){
         Producto objproducto=new Producto();
 
         try {
@@ -62,7 +69,7 @@ public class ProductoDAO {
         return objproducto;
     }
 
-    public void Eliminar(int ID){
+    public static void Eliminar(int ID){
         try {
             String sql="CALL sp_productoDELETE (?)";
             PreparedStatement ps=con.getCon().prepareStatement(sql);
@@ -74,7 +81,7 @@ public class ProductoDAO {
 
     }
 
-    public ArrayList<Producto>list () throws Exception{
+    public static ArrayList<Producto>list() throws Exception{
         ArrayList<Producto> listproductos=new ArrayList<>();
 
         try {

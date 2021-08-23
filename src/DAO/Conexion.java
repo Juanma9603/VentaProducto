@@ -6,10 +6,17 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 
 public class Conexion implements Serializable {
-
+    private static Conexion Instance=null;
     private Connection con=null;
 
-    public Conexion(){
+    public static Conexion getInstance(){
+        if (Instance==null){
+            Instance=new Conexion();
+        }
+        return Instance;
+    }
+
+    private Conexion(){
         con=Conexion.Conectar();
     }
 
