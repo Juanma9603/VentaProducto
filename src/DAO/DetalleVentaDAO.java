@@ -65,4 +65,8 @@ public class DetalleVentaDAO {
             System.out.println("SQL Errordetalle: " +er);
         }
     }
+
+    public void Eliminar(){
+
+    }
 }
