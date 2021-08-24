@@ -90,45 +90,153 @@ public class registrarVenta {
                         volver = true;
                         break;
                     case 2:
-                        new modificarVentaRegistrada().View();
-                        break;
-                    case 3:
-                        volver = false;
-                        System.out.println("Listo a Pagar");
-                        if (total > 0 && total <= 6000) {
-                            System.out.println("1.Efectivo");
-                            System.out.println("2.Tarjeta");
+                        boolean modificar=true;
+                        while (modificar) {
+                            System.out.println("lista");
+                            for (int i = 0; i < listDetalle.size(); i++) {
+                                System.out.println(i + 1 + ".-" + listDetalle.get(i).toString());
+                            }
+                            System.out.println("Indica el item a modificar");
+                            int item = scanner.nextInt();
+                            System.out.println("Indica el ID del producto nuevo");
+                            int nuevopro=scanner.nextInt();
+                            if (nuevopro ==0){
+                                listDetalle.remove(item-1);
+
+                            }else if (nuevopro>0){
+                                Producto objtproductomod = ProductoDAO.Consultar(nuevopro);
+                                System.out.println("Indica la Cantidad");
+                                int modcantidad = scanner.nextInt();
+                                listDetalle.get(item - 1).setObjproducto(objtproductomod);
+                                listDetalle.get(item - 1).setCantidad(modcantidad);
+                            }
+                            SumaSubt=0;
+                            for (int i = 0; i < listDetalle.size(); i++) {
+                                SumaSubt = SumaSubt + (listDetalle.get(i).getObjproducto().getCosto() * listDetalle.get(i).getCantidad());
+                            }
+                            System.out.println("Monto: S/" + SumaSubt);
+
+                            if (SumaSubt < 50) {
+                                System.out.println("No  hay descuento");
+                            } else if (SumaSubt > 51 && SumaSubt <= 100) {
+                                System.out.println("Descuento de 5%");
+                                Descuento = 5 * SumaSubt / 100;
+                                SumaSubt = SumaSubt - Descuento;
+                            } else {
+                                System.out.println("Descuento de 10%");
+                                Descuento = 10 * SumaSubt / 100;
+                                SumaSubt = SumaSubt - Descuento;
+                            }
+                            Igv = (18 * SumaSubt) / 100;
+                            System.out.println("IGV: S/" + Igv);
+                            total = SumaSubt + Igv;
+                            System.out.println("Total con Dscto+IGV: S/" + total);
+
+                            objVenta = new Venta(
+                                    0,
+                                    Igv,
+                                    Descuento,
+                                    SumaSubt,
+                                    new Date(),
+                                    listDetalle
+                            );
+
+                            System.out.println("1.Listo a pagar");
+                            System.out.println("2.Seguir modificando");
 
                             switch (scanner.nextInt()) {
                                 case 1:
-                                    System.out.println("Pagado");
-                                    VentaDAO.Registrar(objVenta);
+
+                                    System.out.println("Listo a Pagar");
+                                    if (total > 0 && total <= 6000) {
+                                        System.out.println("1.Efectivo");
+                                        System.out.println("2.Tarjeta");
+
+                                        switch (scanner.nextInt()) {
+                                            case 1:
+                                                System.out.println("Pagado");
+                                                VentaDAO.Registrar(objVenta);
+                                                modificar=false;
+                                                volver=false;
+                                                break;
+                                            case 2:
+                                                System.out.println("Pagado");
+                                                VentaDAO.Registrar(objVenta);
+                                                modificar=false;
+                                                volver=false;
+                                                break;
+                                            default:
+                                                System.out.println("Escoge 1");
+                                                break;
+                                        }
+                                    } else if (total > 6001) {
+                                        System.out.println("El monto es muy alto, solo puede pagar con tajeta");
+                                        System.out.println("1.Tarjeta");
+                                        System.out.println("2.Cancelar venta");
+                                        int pagar1 = scanner.nextInt();
+                                        switch (pagar1) {
+                                            case 1:
+                                                System.out.println("Pagado");
+                                                VentaDAO.Registrar(objVenta);
+                                                modificar=false;
+                                                volver=false;
+                                                break;
+                                            case 2:
+                                                System.out.println("Cancelado");
+                                                modificar=false;
+                                                volver=false;
+                                                break;
+                                        }
+                                        break;
+
+                                    }
+
                                     break;
                                 case 2:
-                                    System.out.println("Pagado");
-                                    VentaDAO.Registrar(objVenta);
-                                    break;
-                                default:
-                                    System.out.println("Escoge 1");
+                                    System.out.println("seguir modificando");
+                                    modificar = true;
                                     break;
                             }
-                        } else if (total > 6001) {
-                            System.out.println("El monto es muy alto, solo puede pagar con tajeta");
-                            System.out.println("1.Tarjeta");
-                            System.out.println("2.Cancelar venta");
-                            int pagar1 = scanner.nextInt();
-                            switch (pagar1) {
-                                case 1:
-                                    System.out.println("Pagado");
-                                    VentaDAO.Registrar(objVenta);
-                                    break;
-                                case 2:
-                                    System.out.println("Cancelado");
-                                    break;
-                            }
-                            break;
                         }
                         break;
+                    case 3:
+                        volver = false;
+                            System.out.println("Listo a Pagar");
+                            if (total > 0 && total <= 6000) {
+                                System.out.println("1.Efectivo");
+                                System.out.println("2.Tarjeta");
+
+                                switch (scanner.nextInt()) {
+                                    case 1:
+                                        System.out.println("Pagado");
+                                        VentaDAO.Registrar(objVenta);
+                                        break;
+                                    case 2:
+                                        System.out.println("Pagado");
+                                        VentaDAO.Registrar(objVenta);
+                                        break;
+                                    default:
+                                        System.out.println("Escoge 1");
+                                        break;
+                                }
+                            } else if (total > 6001) {
+                                System.out.println("El monto es muy alto, solo puede pagar con tajeta");
+                                System.out.println("1.Tarjeta");
+                                System.out.println("2.Cancelar venta");
+                                int pagar1 = scanner.nextInt();
+                                switch (pagar1) {
+                                    case 1:
+                                        System.out.println("Pagado");
+                                        VentaDAO.Registrar(objVenta);
+                                        break;
+                                    case 2:
+                                        System.out.println("Cancelado");
+                                        break;
+                                }
+                                break;
+                            }
+                            break;
+
                 }
 
             }
