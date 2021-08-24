@@ -62,11 +62,15 @@ public class ProductoDAO {
                         rs.getDate("Registro")
                 );
             }
+
         }catch (SQLException er){
             System.out.println("SQL Error: "+er);
         }
 
-        return objproducto;
+
+            return objproducto;
+
+
     }
 
     public static void Eliminar(int ID){

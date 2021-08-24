@@ -6,6 +6,7 @@ import Entity.Venta;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -87,7 +88,27 @@ public class VentaDAO {
         }catch (SQLException er){
             System.out.println("SQL Error cancel: "+er);
         }
+    }
 
-
+    public static ArrayList<Venta> list() throws Exception{
+        ArrayList<Venta> listVentas = new ArrayList<>();
+        try {
+            Statement stmt=getInstance().con.getCon().createStatement();
+            ResultSet rs= stmt.executeQuery("CALL sp_listarVentas();");
+            while (rs.next()){
+                Venta objventatmp=new Venta(
+                        rs.getInt(1),
+                        0.0,
+                        0.0,
+                        0.0,
+                        rs.getDate(2),
+                        new ArrayList<>()
+                );
+                listVentas.add(objventatmp);
+            }
+        }catch (SQLException er){
+            System.out.println("SQL Error listventas"+er);
+        }
+        return listVentas;
     }
 }

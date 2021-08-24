@@ -9,7 +9,6 @@ import java.util.Scanner;
 public class listarProductos {
     private Scanner scanner = new Scanner(System.in);
     public void View(){
-        ArrayList<Producto> list=new ArrayList<>();
         try {
             System.out.println("Listar Productos");
             ArrayList<Producto> listproductos= ProductoDAO.list();

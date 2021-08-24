@@ -62,7 +62,7 @@ public class Main {
                                             new listarProductos().View();
                                             break;
                                     }
-
+                                break;
                         case 3:
                             new registrarVenta().View();
                             break;
