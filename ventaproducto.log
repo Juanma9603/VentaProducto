@@ -1,0 +1,207 @@
+2021-09-02 16:58:45,509  INFO main (Conexion.java:44) - Estableciendo conexion
+2021-09-02 16:58:45,509  INFO main (Conexion.java:46) - Conectado
+2021-09-02 16:58:45,524  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 16:58:45,524  INFO main (Main.java:25) - App iniciada
+2021-09-02 16:58:48,790  INFO main (Main.java:39) - Se ha iniciado la operacion
+2021-09-02 16:58:55,187  INFO main (Main.java:56) - Registra venta: utilizado
+2021-09-02 16:58:55,202  INFO main (ProductoDAO.java:124) - Correcto call sp_listarProductos
+2021-09-02 16:58:55,218  INFO main (registrarVenta.java:47) - Listando productos
+2021-09-02 16:59:03,460  INFO main (ProductoDAO.java:79) - Correcto call sp_consultarProducto
+2021-09-02 16:59:03,492  INFO main (registrarVenta.java:59) - Realizando consulta
+2021-09-02 16:59:03,492  INFO main (registrarVenta.java:66) - Recolectando datos
+2021-09-02 16:59:07,073  INFO main (registrarVenta.java:76) - Datos recolectados
+2021-09-02 16:59:07,073  INFO main (registrarVenta.java:83) - Calculo realizado
+2021-09-02 16:59:07,073  INFO main (registrarVenta.java:99) - El monto aplica a un descuento de 10%
+2021-09-02 16:59:07,088  INFO main (registrarVenta.java:129) - Venta recopilada
+2021-09-02 16:59:10,576  INFO main (registrarVenta.java:139) - Sigue registro
+2021-09-02 16:59:10,591  INFO main (ProductoDAO.java:124) - Correcto call sp_listarProductos
+2021-09-02 16:59:10,591  INFO main (registrarVenta.java:47) - Listando productos
+2021-09-02 16:59:13,201  INFO main (ProductoDAO.java:79) - Correcto call sp_consultarProducto
+2021-09-02 16:59:13,201  INFO main (registrarVenta.java:59) - Realizando consulta
+2021-09-02 16:59:13,201  INFO main (registrarVenta.java:66) - Recolectando datos
+2021-09-02 16:59:14,797  INFO main (registrarVenta.java:76) - Datos recolectados
+2021-09-02 16:59:14,797  INFO main (registrarVenta.java:83) - Calculo realizado
+2021-09-02 16:59:14,797  INFO main (registrarVenta.java:99) - El monto aplica a un descuento de 10%
+2021-09-02 16:59:14,797  INFO main (registrarVenta.java:129) - Venta recopilada
+2021-09-02 16:59:28,158  INFO main (registrarVenta.java:311) - Accediendo a pago 2 opciones
+2021-09-02 16:59:31,392  INFO main (VentaDAO.java:42) - Correcto call sp_ventaINSERT
+2021-09-02 16:59:31,392  INFO main (registrarVenta.java:327) - Pago realizado
+2021-09-02 16:59:33,220  INFO main (Main.java:41) - Seleccionado salir
+2021-09-02 16:59:33,220  INFO main (Main.java:113) - Finalizando el programa
+2021-09-02 17:03:24,704  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:03:24,704  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:04:22,052  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:04:22,052  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:05:35,665  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:05:35,667  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:06:25,731  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:06:25,747  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:06:46,854  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:06:46,870  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:07:05,104  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:07:05,104  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:07:54,904  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:07:54,920  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:08:30,046  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:08:30,046  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:14:27,266  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:14:27,282  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:15:18,527  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:15:18,527  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:18:26,469  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:18:26,469  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:29:24,693  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:29:24,695  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:47:43,151  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:47:43,151  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:49:45,245  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:49:45,245  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:53:25,875  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:53:25,877  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:54:30,162  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:54:30,166  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:56:06,698  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:56:06,701  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:56:53,894  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:56:53,894  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:58:04,950  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:58:04,952  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:58:45,475  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:58:45,478  INFO main (Main.java:25) - App iniciada
+2021-09-02 17:59:28,516  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 17:59:28,519  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:00:30,893  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:00:30,893  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:03:07,892  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:03:07,892  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:21:30,050 ERROR main (Conexion.java:53) - Error conexion
+2021-09-02 18:21:30,061  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:21:30,061  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:22:07,658 ERROR main (Conexion.java:51) - Error conexionjava.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:22:07,674  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:22:07,674  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:32:30,135 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:32:30,149  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:32:30,149  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:34:55,044 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:34:55,059  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:34:55,059  INFO main (Main.java:25) - App iniciada
+2021-09-02 18:35:34,696 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:35:34,710  INFO main (Main.java:21) - Entrando a la app
+2021-09-02 18:36:17,433 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:36:17,449  INFO main (Main.java:21) - Iniciando app
+2021-09-02 18:36:20,042  INFO main (Main.java:35) - Se ha iniciado la operacion
+2021-09-02 18:36:21,783  INFO main (Main.java:50) - Administrar productos: utilizado
+2021-09-02 18:36:23,079  INFO main (Main.java:71) - Añadir productos: utilizado
+2021-09-02 18:37:13,414 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:37:13,425  INFO main (Main.java:21) - Iniciando app
+2021-09-02 18:37:15,473  INFO main (Main.java:35) - Se ha iniciado la operacion
+2021-09-02 18:37:18,382  INFO main (Main.java:50) - Administrar productos: utilizado
+2021-09-02 18:37:36,917  INFO main (Main.java:71) - Añadir productos: utilizado
+2021-09-02 18:37:51,982 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:37:51,982  INFO main (Main.java:21) - Iniciando app
+2021-09-02 18:37:54,735  INFO main (Main.java:35) - Se ha iniciado la operacion
+2021-09-02 18:37:56,688  INFO main (Main.java:50) - Administrar productos: utilizado
+2021-09-02 18:37:58,501  INFO main (Main.java:71) - Añadir productos: utilizado
+2021-09-02 18:38:07,219  INFO main (añadirProducto.java:22) - Datos obtenidos
+2021-09-02 18:38:17,974 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:38:17,990  INFO main (Main.java:21) - Iniciando app
+2021-09-02 18:38:20,302  INFO main (Main.java:35) - Se ha iniciado la operacion
+2021-09-02 18:38:22,521  INFO main (Main.java:50) - Administrar productos: utilizado
+2021-09-02 18:38:24,224  INFO main (Main.java:71) - Añadir productos: utilizado
+2021-09-02 18:38:30,489  INFO main (añadirProducto.java:22) - Datos obtenidos
+2021-09-02 18:41:40,880 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 18:41:40,880  INFO main (Main.java:19) - Iniciando app
+2021-09-02 18:41:43,036  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 18:41:44,427  INFO main (Main.java:48) - Administrar productos: utilizado
+2021-09-02 18:41:45,895  INFO main (Main.java:69) - Añadir productos: utilizado
+2021-09-02 18:41:56,693  INFO main (aniadirProducto.java:22) - Datos obtenidos
+2021-09-02 18:46:05,915  INFO main (Conexion.java:44) - Estableciendo conexion
+2021-09-02 18:46:05,915  INFO main (Conexion.java:46) - Conectado
+2021-09-02 18:46:05,931  INFO main (Main.java:19) - Iniciando app
+2021-09-02 18:46:17,995  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 18:46:20,032  INFO main (Main.java:48) - Administrar productos: utilizado
+2021-09-02 18:46:21,438  INFO main (Main.java:71) - Modificar productos: utilizado
+2021-09-02 18:46:32,167  INFO main (Conexion.java:44) - Estableciendo conexion
+2021-09-02 18:46:32,167  INFO main (Conexion.java:46) - Conectado
+2021-09-02 18:46:32,183  INFO main (Main.java:19) - Iniciando app
+2021-09-02 18:46:33,277  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 18:46:34,386  INFO main (Main.java:48) - Administrar productos: utilizado
+2021-09-02 18:46:35,448  INFO main (Main.java:69) - Añadir productos: utilizado
+2021-09-02 18:46:47,432  INFO main (aniadirProducto.java:22) - Datos obtenidos
+2021-09-02 18:46:47,713  INFO main (aniadirProducto.java:27) - añadiendo producto
+2021-09-02 18:46:58,852  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 18:47:01,708  INFO main (Main.java:46) - Consulta de venta: utilizado
+2021-09-02 18:47:01,763  INFO main (VentaDAO.java:127) - Correcto call sp_listarVentas
+2021-09-02 18:47:01,771  INFO main (consultarVenta.java:26) - Presentada la lista de ventas
+2021-09-02 18:47:09,100  INFO main (DetalleVentaDAO.java:51) - Correcto call sp_consultarVentaProducto
+2021-09-02 18:47:09,100  INFO main (VentaDAO.java:84) - correcto call sp_consultarVenta
+2021-09-02 18:47:09,100  INFO main (consultarVenta.java:39) - Realizando la consulta
+2021-09-02 18:47:09,100  WARN main (consultarVenta.java:42) - Se intenta vulnerar el programa
+2021-09-02 18:47:13,542  INFO main (DetalleVentaDAO.java:51) - Correcto call sp_consultarVentaProducto
+2021-09-02 18:47:13,542  INFO main (VentaDAO.java:84) - correcto call sp_consultarVenta
+2021-09-02 18:47:13,542  INFO main (consultarVenta.java:39) - Realizando la consulta
+2021-09-02 18:47:13,542  WARN main (consultarVenta.java:42) - Se intenta vulnerar el programa
+2021-09-02 18:47:16,420  INFO main (DetalleVentaDAO.java:51) - Correcto call sp_consultarVentaProducto
+2021-09-02 18:47:16,420  INFO main (VentaDAO.java:84) - correcto call sp_consultarVenta
+2021-09-02 18:47:16,420  INFO main (consultarVenta.java:39) - Realizando la consulta
+2021-09-02 18:47:16,420  INFO main (consultarVenta.java:45) - Presentando datos hallados
+2021-09-02 18:47:22,438  INFO main (consultarVenta.java:69) - Regresando al menu
+2021-09-02 18:47:27,918  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 18:47:31,214  INFO main (Main.java:52) - Cancela venta: utilizado
+2021-09-02 18:47:38,245  INFO main (DetalleVentaDAO.java:51) - Correcto call sp_consultarVentaProducto
+2021-09-02 18:47:38,245  INFO main (VentaDAO.java:84) - correcto call sp_consultarVenta
+2021-09-02 18:47:38,245  INFO main (cancelarVenta.java:23) - Realizando consulta
+2021-09-02 18:47:43,710  WARN main (cancelarVenta.java:52) - Se intento vulnerar el programa
+2021-09-02 18:47:47,713  INFO main (DetalleVentaDAO.java:51) - Correcto call sp_consultarVentaProducto
+2021-09-02 18:47:47,713  INFO main (VentaDAO.java:84) - correcto call sp_consultarVenta
+2021-09-02 18:47:47,713  INFO main (cancelarVenta.java:23) - Realizando consulta
+2021-09-02 18:47:52,322  INFO main (cancelarVenta.java:37) - Cancelando venta
+2021-09-02 18:47:55,354  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 18:47:57,947  INFO main (Main.java:50) - Registra venta: utilizado
+2021-09-02 18:47:57,947  INFO main (ProductoDAO.java:124) - Correcto call sp_listarProductos
+2021-09-02 18:47:57,947  INFO main (registrarVenta.java:47) - Listando productos
+2021-09-02 18:48:00,494  INFO main (ProductoDAO.java:79) - Correcto call sp_consultarProducto
+2021-09-02 18:48:00,494  INFO main (registrarVenta.java:59) - Realizando consulta
+2021-09-02 18:48:00,494  INFO main (registrarVenta.java:66) - Recolectando datos
+2021-09-02 18:48:05,431  INFO main (registrarVenta.java:76) - Datos recolectados
+2021-09-02 18:48:05,431  INFO main (registrarVenta.java:83) - Calculo realizado
+2021-09-02 18:48:05,431  INFO main (registrarVenta.java:99) - El monto aplica a un descuento de 10%
+2021-09-02 18:48:05,447  INFO main (registrarVenta.java:129) - Venta recopilada
+2021-09-02 18:48:09,964  INFO main (registrarVenta.java:150) - Indicando lista de venta
+2021-09-02 18:48:13,776  INFO main (registrarVenta.java:155) - Recopilando datos
+2021-09-02 18:48:18,641  INFO main (ProductoDAO.java:79) - Correcto call sp_consultarProducto
+2021-09-02 18:48:18,641  INFO main (registrarVenta.java:166) - Se realizo consulta
+2021-09-02 18:48:22,016  INFO main (registrarVenta.java:176) - Recopilado de datos para modificar
+2021-09-02 18:48:22,016  INFO main (registrarVenta.java:184) - Calculo realizado
+2021-09-02 18:48:22,016  INFO main (registrarVenta.java:191) - El monto no aplica descuento
+2021-09-02 18:48:22,016  INFO main (registrarVenta.java:229) - Venta recopilada
+2021-09-02 18:48:32,956  INFO main (registrarVenta.java:301) - Sigue modificando
+2021-09-02 18:48:32,956  INFO main (registrarVenta.java:150) - Indicando lista de venta
+2021-09-02 18:48:35,943  INFO main (registrarVenta.java:155) - Recopilando datos
+2021-09-02 18:48:38,802  INFO main (ProductoDAO.java:79) - Correcto call sp_consultarProducto
+2021-09-02 18:48:38,802  INFO main (registrarVenta.java:166) - Se realizo consulta
+2021-09-02 19:06:44,276  INFO main (Conexion.java:44) - Estableciendo conexion
+2021-09-02 19:06:44,276  INFO main (Conexion.java:46) - Conectado
+2021-09-02 19:06:44,292  INFO main (Main.java:19) - Iniciando app
+2021-09-02 19:06:45,948  INFO main (Main.java:33) - Se ha iniciado la operacion
+2021-09-02 19:07:01,215  INFO main (Main.java:50) - Registra venta: utilizado
+2021-09-02 19:07:01,230  INFO main (ProductoDAO.java:124) - Correcto call sp_listarProductos
+2021-09-02 19:07:01,246  INFO main (registrarVenta.java:47) - Listando productos
+2021-09-02 19:07:04,386  INFO main (ProductoDAO.java:79) - Correcto call sp_consultarProducto
+2021-09-02 19:07:04,386  INFO main (registrarVenta.java:59) - Realizando consulta
+2021-09-02 19:07:04,386  INFO main (registrarVenta.java:66) - Recolectando datos
+2021-09-02 19:07:06,777  INFO main (registrarVenta.java:76) - Datos recolectados
+2021-09-02 19:07:06,777  INFO main (registrarVenta.java:83) - Calculo realizado
+2021-09-02 19:07:06,777  INFO main (registrarVenta.java:90) - El monto no aplica descuento
+2021-09-02 19:07:06,777  INFO main (registrarVenta.java:129) - Venta recopilada
+2021-09-02 19:07:09,683  INFO main (registrarVenta.java:152) - Indicando lista de venta
+2021-09-02 19:07:12,183  INFO main (registrarVenta.java:194) - Calculo realizado
+2021-09-02 19:07:12,183  INFO main (registrarVenta.java:201) - El monto no aplica descuento
+2021-09-02 19:07:12,183  INFO main (registrarVenta.java:239) - Venta recopilada
+2021-09-02 19:07:20,885  INFO main (registrarVenta.java:311) - Sigue modificando
+2021-09-02 19:07:20,885  INFO main (registrarVenta.java:152) - Indicando lista de venta
+2021-09-02 19:09:31,473 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-02 19:09:31,489  INFO main (Main.java:19) - Iniciando app
+2021-09-03 11:53:22,460 ERROR main (Conexion.java:51) - Error de conexion java.sql.SQLException: Your password has expired. To log in you must change it using a client that supports expired passwords.
+2021-09-03 11:53:22,523  INFO main (Main.java:19) - Iniciando app
